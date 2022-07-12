@@ -1338,6 +1338,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@open-southeners/vue3-emitter-docs@workspace:packages/vue3-emitter":
+  version: 0.0.0-use.local
+  resolution: "@open-southeners/vue3-emitter-docs@workspace:packages/vue3-emitter"
+  languageName: unknown
+  linkType: soft
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
