@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress'
-import { configure } from '../../../../commonConfig'
+import { configure, navbarSocialLinks } from '../../../../commonConfig'
 
 export default defineUserConfig(configure('flex-url', {
   config: {
@@ -23,10 +23,8 @@ export default defineUserConfig(configure('flex-url', {
           '/guide/usage.md',
         ],
       },
-      {
-        text: 'Discord',
-        link: 'https://discord.gg/tyMUxvMnvh'
-      },
+      
+      ...navbarSocialLinks,
     ],
 
     sidebar: {

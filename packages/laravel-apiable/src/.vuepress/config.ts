@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress'
-import { configure } from '../../../../commonConfig'
+import { configure, navbarSocialLinks } from '../../../../commonConfig'
 
 export default defineUserConfig(configure('laravel-apiable', {
   config: {
@@ -29,6 +29,8 @@ export default defineUserConfig(configure('laravel-apiable', {
         text: 'API',
         link: '/guide/api.md'
       },
+
+      ...navbarSocialLinks,
     ],
 
     sidebar: {
