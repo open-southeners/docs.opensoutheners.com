@@ -1,28 +1,13 @@
 import { defineUserConfig } from 'vuepress'
-import { defaultTheme } from '@vuepress/theme-default'
-import { searchPlugin } from '@vuepress/plugin-search'
+import { configure } from '../../../../commonConfig'
 
-export default defineUserConfig({
-  dest: '../../dist/flex-url',
+export default defineUserConfig(configure('flex-url', {
+  config: {
+    title: 'Flex URL',
+    description: 'Zero-dependency utility for parsing and modifying URL params',
+  },
 
-  base: '/flex-url/',
-  
-  lang: 'en-US',
-  title: 'Flex URL',
-  description: 'Zero-dependency utility for parsing and modifying URL params',
-
-  plugins: [
-    searchPlugin({
-      maxSuggestions: 10
-    }),
-  ],
-
-  theme: defaultTheme({
-    logo: 'https://vuejs.org/images/logo.png',
-
-    repo: 'open-southeners/flex-url',
-    docsRepo: 'open-southeners/docs.opensoutheners.com',
-
+  themeConfig: {
     navbar: [
       {
         text: 'Home',
@@ -74,5 +59,5 @@ export default defineUserConfig({
         // },
       ],
     },
-  }),
-})
+  },
+}))

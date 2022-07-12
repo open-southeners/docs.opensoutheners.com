@@ -6,6 +6,7 @@
   ],
   "devDependencies": {
     "@vuepress/plugin-search": "next",
+    "deepmerge": "^4.2.2",
     "lerna": "^5.1.8",
     "vuepress": "next"
   }

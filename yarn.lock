@@ -2784,6 +2784,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deepmerge@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "deepmerge@npm:4.2.2"
+  checksum: a8c43a1ed8d6d1ed2b5bf569fa4c8eb9f0924034baf75d5d406e47e157a451075c4db353efea7b6bcc56ec48116a8ce72fccf867b6e078e7c561904b5897530b
+  languageName: node
+  linkType: hard
+
 "defaults@npm:^1.0.3":
   version: 1.0.3
   resolution: "defaults@npm:1.0.3"
@@ -2852,6 +2859,7 @@ __metadata:
   resolution: "docs.opensoutheners.com@workspace:."
   dependencies:
     "@vuepress/plugin-search": next
+    deepmerge: ^4.2.2
     lerna: ^5.1.8
     vuepress: next
   languageName: unknown

@@ -1,26 +1,13 @@
 import { defineUserConfig } from 'vuepress'
-import { defaultTheme } from '@vuepress/theme-default'
-import { searchPlugin } from '@vuepress/plugin-search'
+import { configure } from '../../../../commonConfig'
 
-export default defineUserConfig({
-  dest: '../../dist/laravel-apiable',
+export default defineUserConfig(configure('laravel-apiable', {
+  config: {
+    title: 'Laravel Apiable',
+    description: 'Integrate JSON:API resources on your Laravel API',
+  },
 
-  base: '/laravel-apiable/',
-  
-  lang: 'en-US',
-  title: 'Laravel Apiable',
-  description: 'Integrate JSON:API resources on your Laravel API',
-
-  plugins: [
-    searchPlugin({
-      maxSuggestions: 10
-    }),
-  ],
-
-  theme: defaultTheme({
-    repo: 'open-southeners/laravel-apiable',
-    docsRepo: 'open-southeners/docs.opensoutheners.com',
-    
+  themeConfig: {
     navbar: [
       {
         text: 'Home',
@@ -90,5 +77,5 @@ export default defineUserConfig({
         // },
       ],
     },
-  }),
-})
+  },
+}))
