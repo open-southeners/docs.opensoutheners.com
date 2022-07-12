@@ -5,10 +5,10 @@ import { searchPlugin } from '@vuepress/plugin-search'
 export default defineUserConfig({
   dest: '../../dist/flex-url',
 
-  base: process.env?.CI ? '/' : '/flex-url/',
-  head: process.env?.CI ? [
+  base: '/',
+  head: [
     ['base', { href: 'https://docs.open-southeners.com/flex-url/' }]
-  ] : [],
+  ],
   
   lang: 'en-US',
   title: 'Flex URL',
