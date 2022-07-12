@@ -1,0 +1,11 @@
+{
+  "name": "@open-southeners/flex-url-docs",
+  "private": true,
+  "repository": "https://github.com/open-southeners/docs.opensoutheners.com#readme",
+  "license": "MIT",
+  "scripts": {
+    "docs:build": "vuepress build src",
+    "docs:clean-dev": "vuepress dev src --clean-cache",
+    "docs:dev": "vuepress dev src"
+  }
+}

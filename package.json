@@ -1,0 +1,12 @@
+{
+  "name": "docs.opensoutheners.com",
+  "packageManager": "yarn@3.2.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@vuepress/plugin-search": "next",
+    "lerna": "^5.1.8",
+    "vuepress": "next"
+  }
+}
