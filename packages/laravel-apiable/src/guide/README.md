@@ -25,39 +25,50 @@ php artisan vendor:publish --provider="OpenSoutheners\LaravelApiable\ServiceProv
 This is a bit of manual work, but you need to setup your models in order for them to be JSON:API serializable entities:
 
 ```php
+use Illuminate\Database\Eloquent\Model;
+use OpenSoutheners\LaravelApiable\Contracts\JsonApiable;
 
+class Film extends Model implements JsonApiable
+{
+    /**
+     * Set options for model to be serialize with JSON:API.
+     *
+     * @return \OpenSoutheners\LaravelApiable\JsonApiableOptions
+     */
+    public function jsonApiableOptions()
+    {
+        return JsonApiableOptions::withDefaults(self::class);
+    }
+}
 ```
+
+You need to add that `implements JsonApiable` to your class importing this class and the `jsonApiableOptions` method.
 
 ### Basic transformation usage
 
 And, finally, use as simple as importing the class `OpenSoutheners\LaravelApiable\Http\Resources\JsonApiCollection` for collections or `OpenSoutheners\LaravelApiable\Http\Resources\JsonApiResource` for resources.
 
 ```php
-<?php
-
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use OpenSoutheners\LaravelApiable\Http\Resources\JsonApiCollection;
-use App\User;
+use App\Models\Film;
 
-class UserController extends Controller
+class FilmController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \OpenSoutheners\LaravelApiable\Http\Resources\JsonApiCollection<\App\Models\Film>
      */
     public function index()
     {
         return new JsonApiCollection(
-            User::all()
+            Film::all()
         );
     }
 }
 ```
 
-### Error handling
+### Error handling <Badge type="tip" text="new" vertical="middle" />
 
 When your application returns errors and your frontend only understand JSON:API, then these needs to be transform. So we've you cover, set them up by simply doing the following on your `app/Exceptions/Handler.php`
 

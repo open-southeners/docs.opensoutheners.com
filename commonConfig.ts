@@ -2,6 +2,7 @@ import type { UserConfig } from 'vuepress'
 import type { DefaultThemeOptions, NavbarConfig } from '@vuepress/theme-default'
 import { defaultTheme } from '@vuepress/theme-default'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { copyCodePlugin } from 'vuepress-plugin-copy-code2'
 import deepmerge from 'deepmerge'
 
 interface ConfigReplacements {
@@ -37,6 +38,8 @@ export function configure(id: string, { themeConfig = {}, config = {} }: ConfigR
       searchPlugin({
         maxSuggestions: 10
       }),
+
+      copyCodePlugin(),
     ],
 
     theme: defaultTheme(themeConfig),

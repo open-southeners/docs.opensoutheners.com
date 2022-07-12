@@ -5,9 +5,9 @@
 
 ## Illuminate\Database\Eloquent\Builder
 
-:: tip
+::: tip
 Please, note the **difference between Collection and Builder coming from an Eloquent model**, because that conditions the accesibility of these and other methods.
-::
+:::
 
 Extending the framework `Illuminate\Database\Eloquent\Builder`.
 
@@ -170,6 +170,74 @@ apiable()->resourceTypeForModel($post);
 // or
 
 apiable()->resourceTypeForModel(Post::class);
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
+### getResourceType
+
+Get resource type from model class or instance (if one specified, otherwise guess it using `resourceTypeForModel` method).
+
+**Example:**
+
+<CodeGroup>
+  <CodeGroupItem title="FACADE">
+
+```php
+$post = Post::first();
+
+Apiable::getResourceType($post);
+
+// or
+
+Apiable::getResourceType(Post::class);
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="HELPER">
+
+```php
+$post = Post::first();
+
+apiable()->getResourceType($post);
+
+// or
+
+apiable()->getResourceType(Post::class);
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
+### jsonApiRenderable
+
+Render errors in a JSON:API way. **[Check documentation on how to integrate this in your project.](README.md/#error-handling)**
+
+**Example:**
+
+<CodeGroup>
+  <CodeGroupItem title="FACADE">
+
+```php
+try {
+  // Code that might fails here...
+} catch (\Throwable $e) {
+  Apiable::jsonApiRenderable($e, request());
+}
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="HELPER">
+
+```php
+try {
+  // Code that might fails here...
+} catch (\Throwable $e) {
+  apiable()->jsonApiRenderable($e, request());
+}
 ```
 
   </CodeGroupItem>

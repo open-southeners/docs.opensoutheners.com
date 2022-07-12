@@ -7,7 +7,7 @@ actions:
     link: /guide/README.md
     type: primary
   - text: Comparison
-    link: /comparison.md
+    link: /guide/comparison.md
     type: secondary
 features:
   - title: Bleeding edge

@@ -1326,6 +1326,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@open-southeners/docs@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@open-southeners/docs@workspace:."
+  dependencies:
+    "@vuepress/plugin-search": next
+    deepmerge: ^4.2.2
+    lerna: ^5.1.8
+    vuepress: next
+    vuepress-plugin-copy-code2: next
+  languageName: unknown
+  linkType: soft
+
 "@open-southeners/flex-url-docs@workspace:packages/flex-url":
   version: 0.0.0-use.local
   resolution: "@open-southeners/flex-url-docs@workspace:packages/flex-url"
@@ -2125,6 +2137,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"balloon-css@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "balloon-css@npm:1.2.0"
+  checksum: 2f9bf379240afb3ffd45e80d974e96536444151f74ead9aa5968445fc414ee3460b2204c2ec8d0c1ef4e26446fce5606621fabc8741c2553ec7852042f7d31fb
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.3.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
@@ -2747,6 +2766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dayjs@npm:^1.11.3":
+  version: 1.11.3
+  resolution: "dayjs@npm:1.11.3"
+  checksum: c87e06b562a51ae6568cc5b840c7579d82a0f8af7163128c858fe512d3d71d07bd8e8e464b8cc41b8698a9e26b80ab2c082d14a1cd4c33df5692d77ccdfc5a43
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -2859,17 +2885,6 @@ __metadata:
   checksum: fa05e18324510d7283f55862f3161c6759a3f2f8dbce491a2fc14c8324c498286c54282c1f0e933cb930da8419b30679389499b919122952a4f8592362ef4615
   languageName: node
   linkType: hard
-
-"docs.opensoutheners.com@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "docs.opensoutheners.com@workspace:."
-  dependencies:
-    "@vuepress/plugin-search": next
-    deepmerge: ^4.2.2
-    lerna: ^5.1.8
-    vuepress: next
-  languageName: unknown
-  linkType: soft
 
 "dot-prop@npm:^5.1.0":
   version: 5.3.0
@@ -6539,6 +6554,60 @@ __metadata:
     "@vue/server-renderer": 3.2.37
     "@vue/shared": 3.2.37
   checksum: cd20069c311e1de54b7d9b5d9c6021f1a6a70b0cf05cf7fc36b59c02623cbdc7c0075fb2c9e17859c77c86b15c596a447ee16c70064e9f2feba2df27139260b9
+  languageName: node
+  linkType: hard
+
+"vuepress-plugin-copy-code2@npm:next":
+  version: 2.0.0-beta.86
+  resolution: "vuepress-plugin-copy-code2@npm:2.0.0-beta.86"
+  dependencies:
+    "@vuepress/client": 2.0.0-beta.49
+    "@vuepress/utils": 2.0.0-beta.49
+    balloon-css: ^1.2.0
+    vue: ^3.2.37
+    vue-router: ^4.1.2
+    vuepress-plugin-sass-palette: 2.0.0-beta.86
+    vuepress-shared: 2.0.0-beta.86
+  peerDependencies:
+    sass-loader: ^13.0.0
+  peerDependenciesMeta:
+    sass-loader:
+      optional: true
+  checksum: 37ac9ed73f6c3c801cf7457947b8f6481eac86acd6c5c91af8df4e52100b7859a82de2ac12a4ea90a83e65b244d97c2e9d60b9b756f0b13f2fcc694d03e71e9b
+  languageName: node
+  linkType: hard
+
+"vuepress-plugin-sass-palette@npm:2.0.0-beta.86":
+  version: 2.0.0-beta.86
+  resolution: "vuepress-plugin-sass-palette@npm:2.0.0-beta.86"
+  dependencies:
+    "@vuepress/utils": 2.0.0-beta.49
+    chokidar: ^3.5.3
+    sass: ^1.53.0
+    vuepress-shared: 2.0.0-beta.86
+  peerDependencies:
+    sass-loader: ^13.0.0
+  peerDependenciesMeta:
+    sass-loader:
+      optional: true
+  checksum: df783314e82d2ee0a9954216266f0ea3c6a5897fe1d2f468817a7a2b2d3e81a253d68f2f42b2a7362c17ee0709af24d635c4856aa8bdfe6fbc624bfb4c78db81
+  languageName: node
+  linkType: hard
+
+"vuepress-shared@npm:2.0.0-beta.86":
+  version: 2.0.0-beta.86
+  resolution: "vuepress-shared@npm:2.0.0-beta.86"
+  dependencies:
+    "@vuepress/client": 2.0.0-beta.49
+    "@vuepress/plugin-git": 2.0.0-beta.49
+    "@vuepress/shared": 2.0.0-beta.49
+    "@vuepress/utils": 2.0.0-beta.49
+    dayjs: ^1.11.3
+    execa: ^5.1.1
+    ora: ^5.4.1
+    vue: ^3.2.37
+    vue-router: ^4.1.2
+  checksum: f69d378bfc80192dbe02b12e8f80e947d023410b82e66f9d04f33892af5233a0cb472615a34d5188127d59027bac2427e1c725036f6452b9d97c5cc64163550f
   languageName: node
   linkType: hard
 

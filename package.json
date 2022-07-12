@@ -1,5 +1,5 @@
 {
-  "name": "docs.opensoutheners.com",
+  "name": "@open-southeners/docs",
   "packageManager": "yarn@3.2.1",
   "workspaces": [
     "packages/*"
@@ -8,6 +8,7 @@
     "@vuepress/plugin-search": "next",
     "deepmerge": "^4.2.2",
     "lerna": "^5.1.8",
-    "vuepress": "next"
+    "vuepress": "next",
+    "vuepress-plugin-copy-code2": "next"
   }
 }
