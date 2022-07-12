@@ -4,7 +4,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   dest: '../../dist/flex-url',
-  base: process.env?.CI ? '/' : '/flex-url/',
+  // base: process.env?.CI ? '/' : '/flex-url/',
   lang: 'en-US',
   title: 'Flex URL',
   description: 'Zero-dependency utility for parsing and modifying URL params',
