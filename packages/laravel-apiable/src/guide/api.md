@@ -1,6 +1,12 @@
 
 # API
 
+::: danger
+This page still work in progress as we're still on pre-releases.
+
+**We absolutely DON'T recommend using this on production environments yet**.
+:::
+
 [[toc]]
 
 ## Illuminate\Database\Eloquent\Builder

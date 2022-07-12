@@ -16,11 +16,15 @@ composer require open-southeners/laravel-apiable
 
 First publish the config file once installed like this:
 
-```sh
+```bash:no-line-numbers
 php artisan vendor:publish --provider="OpenSoutheners\LaravelApiable\ServiceProvider"
 ```
 
 ### Setup your models
+
+::: tip
+For more information about how to customise this [check out Responses section](responses.md).
+:::
 
 This is a bit of manual work, but you need to setup your models in order for them to be JSON:API serializable entities:
 
@@ -61,9 +65,7 @@ class FilmController extends Controller
      */
     public function index()
     {
-        return new JsonApiCollection(
-            Film::all()
-        );
+        return new JsonApiCollection(Film::all());
     }
 }
 ```
@@ -89,5 +91,3 @@ public function register()
     // Rest of the register method...
 }
 ```
-
-For further advance (or even more simple methods), you should [check out Responses section](responses.md).
