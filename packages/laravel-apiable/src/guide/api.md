@@ -249,3 +249,43 @@ try {
   </CodeGroupItem>
 </CodeGroup>
 
+### response
+
+Render content as a JSON:API serialised response. **[Check documentation on how to customise these reponses.](responses.md)**
+
+**Example:**
+
+<CodeGroup>
+  <CodeGroupItem title="FACADE">
+
+```php
+Apiable::response(Film::all())->allowing([
+  // list of allowed user request params...
+])->list();
+
+// or
+
+Apiable::response(Film::all(), [
+  // list of allowed user request params...
+]);
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="HELPER">
+
+```php
+apiable()->response(Film::all())->allowing([
+  // list of allowed user request params...
+])->list();
+
+// or
+
+apiable()->response(Film::all(), [
+  // list of allowed user request params...
+]);
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+

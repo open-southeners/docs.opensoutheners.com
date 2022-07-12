@@ -78,16 +78,6 @@ use OpenSoutheners\LaravelApiable\Http\Resources\JsonApiResource;
 class PostResource extends JsonApiResource
 {
     /**
-     * Eager-load the following resource model relationships.
-     *
-     * @return array
-     */
-    protected function withRelationships()
-    {
-        return ['author'];
-    }
-
-    /**
      * Attach additional attributes data.
      *
      * @return array
