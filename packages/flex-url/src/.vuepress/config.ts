@@ -7,7 +7,7 @@ export default defineUserConfig({
 
   base: '/',
   head: [
-    ['base', { href: 'https://docs.open-southeners.com/flex-url/' }]
+    ['base', { href: 'https://docs.opensoutheners.com/flex-url/' }]
   ],
   
   lang: 'en-US',

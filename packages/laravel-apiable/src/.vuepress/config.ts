@@ -5,9 +5,9 @@ import { searchPlugin } from '@vuepress/plugin-search'
 export default defineUserConfig({
   dest: '../../dist/laravel-apiable',
 
-  base: '/',
+  base: '/laravel-apiable/',
   head: [
-    ['base', { href: 'https://docs.open-southeners.com/laravel-apiable/' }]
+    ['base', { href: 'https://docs.opensoutheners.com/laravel-apiable/' }]
   ],
   
   lang: 'en-US',
