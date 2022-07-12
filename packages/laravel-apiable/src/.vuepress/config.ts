@@ -6,9 +6,6 @@ export default defineUserConfig({
   dest: '../../dist/laravel-apiable',
 
   base: '/laravel-apiable/',
-  // head: [
-  //   ['base', { href: 'https://docs.opensoutheners.com/laravel-apiable/' }]
-  // ],
   
   lang: 'en-US',
   title: 'Laravel Apiable',

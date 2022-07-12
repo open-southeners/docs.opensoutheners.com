@@ -6,9 +6,6 @@ export default defineUserConfig({
   dest: '../../dist/flex-url',
 
   base: '/flex-url/',
-  head: [
-    ['base', { href: '/' }]
-  ],
   
   lang: 'en-US',
   title: 'Flex URL',
