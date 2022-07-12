@@ -21,6 +21,7 @@ export default defineUserConfig({
     logo: 'https://vuejs.org/images/logo.png',
 
     repo: 'open-southeners/flex-url',
+    docsRepo: 'open-southeners/docs.opensoutheners.com',
 
     navbar: [
       {

@@ -19,6 +19,7 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     repo: 'open-southeners/laravel-apiable',
+    docsRepo: 'open-southeners/docs.opensoutheners.com',
     
     navbar: [
       {
