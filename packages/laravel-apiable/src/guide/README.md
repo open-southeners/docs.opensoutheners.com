@@ -70,7 +70,7 @@ class FilmController extends Controller
 }
 ```
 
-### Error handling <Badge type="tip" text="new" vertical="middle" />
+### Error handling
 
 When your application returns errors and your frontend only understand JSON:API, then these needs to be transform. So we've you cover, set them up by simply doing the following on your `app/Exceptions/Handler.php`
 
