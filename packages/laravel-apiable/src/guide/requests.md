@@ -1,5 +1,5 @@
 
-# Requests <Badge type="tip" text="new" vertical="middle" />
+# Requests
 
 As a new addition to this package, you can now allow your users to use:
 

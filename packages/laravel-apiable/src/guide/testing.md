@@ -187,3 +187,29 @@ $response->assertJsonApi(function (AssertableJsonApi $assert) use ($relatedComme
   $assert->hasRelationshipWith($relatedComment, true);
 });
 ```
+
+### isCollection <Badge type="tip" text="0.3.0" vertical="middle" />
+
+Assert that the response is a collection (list of resources).
+
+```php
+use OpenSoutheners\LaravelApiable\Testing\AssertableJsonApi;
+
+$response = $this->getJson('/posts');
+
+$response->assertJsonApi(function (AssertableJsonApi $assert) {
+  $assert->isCollection();
+});
+```
+
+### isResource <Badge type="tip" text="0.3.0" vertical="middle" />
+
+```php
+use OpenSoutheners\LaravelApiable\Testing\AssertableJsonApi;
+
+$response = $this->getJson('/posts/1');
+
+$response->assertJsonApi(function (AssertableJsonApi $assert) {
+  $assert->isResource();
+});
+```

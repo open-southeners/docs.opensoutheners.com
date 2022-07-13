@@ -93,3 +93,33 @@ class PostResource extends JsonApiResource
     }
 }
 ```
+
+## Using JsonApiResponse to create API responses <Badge type="tip" text="new" vertical="middle" />
+
+::: tip
+For the requests side with features like allowing specific filters, sorts, etc., you should [check our Request section](requests.md).
+:::
+
+### List of resources
+
+To get a list (wrapped in a `JsonApiCollection`) of your resources query you should do the following:
+
+```php
+JsonApiResponse::from(Film::where('title', 'LIKE', 'The%'))->list();
+```
+
+### One resource by key <Badge type="tip" text="0.3.0" vertical="middle" />
+
+And to get a single resource you can do the following:
+
+```php
+JsonApiResponse::from(Film::class)->getOne(1);
+```
+
+But **you are not only limited to send a key**, you could also send a model instance, as long as it has the key (`id` by default in Laravel) available:
+
+```php
+$film = Film::first();
+
+JsonApiResponse::from(Film::class)->getOne($film);
+```
