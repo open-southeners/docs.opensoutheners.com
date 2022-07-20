@@ -6,7 +6,7 @@ So here we'll explain the differences between them and this one.
 
 ## skore-labs/laravel-json-api
 
-- Repository here: [https://github.com/laravel-json-api/laravel](https://github.com/laravel-json-api/laravel)
+**[Link to repository](https://github.com/laravel-json-api/laravel)**
 
 Its our own! But now in a different organisation + renewed with more stuff on top of it (like a built-in query builder, JSON:API error handling, etc).
 
@@ -14,15 +14,26 @@ We recommend you to update to this one if you feel ready to jump to an almost si
 
 ## laravel-json-api/laravel
 
-- Repository here: [https://github.com/laravel-json-api/laravel](https://github.com/laravel-json-api/laravel)
+**[Link to repository](https://github.com/laravel-json-api/laravel)**
 
 This is very similar to this new Laravel Apiable. Only problem thought is this package seems to achieve the same by an odd way and requires to add more "layers" on top of the ones that Laravel's already provides (API resources, etc). 
 
 Also it comes licensed as Apache 2.0, while our is reusing the same license as Laravel does: MIT.
 
+## spatie/laravel-query-builder
+
+**[Link to repository](https://github.com/spatie/laravel-query-builder)**
+
+Disadvantages compared to this:
+
+- Doesn't integrate well with [GeneaLabs/laravel-model-caching](https://github.com/GeneaLabs/laravel-model-caching).
+- Doesn't provide filter methods out-of-the-box for scopes (you need to create all by your own).
+- Doesn't provide ability to use appended attributes in filters, sorts & appends (Laravel accessors).
+- Doesn't do JSON:API response formatting.
+
 ## Fractal
 
-- Repository here: [https://github.com/thephpleague/fractal](https://github.com/thephpleague/fractal)
+**[Link to repository](https://github.com/thephpleague/fractal)**
 
 Much simpler than the one above, but still adds a new layer (as **it is not a Laravel package**).
 
