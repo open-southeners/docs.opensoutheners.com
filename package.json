@@ -5,8 +5,11 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@vuepress/plugin-search": "next",
     "deepmerge": "^4.2.2",
+    "husky": "^8.0.1",
     "lerna": "^5.1.8",
     "vuepress": "next",
     "vuepress-plugin-copy-code2": "next"
