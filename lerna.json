@@ -3,6 +3,6 @@
     "packages/*"
   ],
   "useNx": false,
-  "version": "0.0.0",
+  "version": "independent",
   "useWorkspaces": true
 }
