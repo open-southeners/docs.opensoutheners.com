@@ -94,7 +94,7 @@ class PostResource extends JsonApiResource
 }
 ```
 
-## Using JsonApiResponse to create API responses <Badge type="tip" text="new" vertical="middle" />
+## Using JsonApiResponse to create API responses
 
 ::: tip
 For the requests side with features like allowing specific filters, sorts, etc., you should [check our Request section](requests.md).
