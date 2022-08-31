@@ -20,6 +20,22 @@ First publish the config file once installed like this:
 php artisan vendor:publish --provider="OpenSoutheners\LaravelApiable\ServiceProvider"
 ```
 
+Then edit the `resource_type_map` part including all your models like this:
+
+```php
+/**
+ * Resource type model map.
+ *
+ * @see https://docs.opensoutheners.com/laravel-apiable/guide/#getting-started
+ */
+'resource_type_map' => [
+  App\Models\Film::class => 'film',
+  App\Models\Review::class => 'review',
+],
+```
+
+**If you see, this is same as Laravel's [`Relation::enforceMorphMap()`](https://laravel.com/docs/master/eloquent-relationships#custom-polymorphic-types) but reversed.**
+
 ### Setup your models
 
 ::: tip
@@ -31,18 +47,13 @@ This is a bit of manual work, but you need to setup your models in order for the
 ```php
 use Illuminate\Database\Eloquent\Model;
 use OpenSoutheners\LaravelApiable\Contracts\JsonApiable;
+use OpenSoutheners\LaravelApiable\Concerns\HasJsonApi;
 
 class Film extends Model implements JsonApiable
 {
-    /**
-     * Set options for model to be serialize with JSON:API.
-     *
-     * @return \OpenSoutheners\LaravelApiable\JsonApiableOptions
-     */
-    public function jsonApiableOptions()
-    {
-        return JsonApiableOptions::withDefaults(self::class);
-    }
+    use HasJsonApi;
+
+    // rest of your model
 }
 ```
 

@@ -102,6 +102,10 @@ For the requests side with features like allowing specific filters, sorts, etc.,
 
 ### List of resources
 
+::: tip
+This will get a paginated response. In case you've install [hammerstone/fast-paginate](https://github.com/hammerstonedev/fast-paginate) it will use fastPaginate to make it faster.
+:::
+
 To get a list (wrapped in a `JsonApiCollection`) of your resources query you should do the following:
 
 ```php

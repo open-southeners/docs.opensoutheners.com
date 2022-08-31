@@ -8,6 +8,7 @@ As a new addition to this package, you can now allow your users to use:
 - Append model accessors ([learn more about them](https://laravel.com/docs/master/eloquent-serialization#appending-values-to-json)).
 - Select fields from the database ([sparse fieldset](https://jsonapi.org/format/#fetching-sparse-fieldsets)).
 - Sort by attributes.
+- Perform a fulltext search (using [Laravel Scout](https://laravel.com/docs/master/scout)).
 
 All of the following being conditionally allowed by you on your controllers, like the following example:
 
@@ -210,6 +211,18 @@ JsonApiResponse::from(Film::class)->allowing([
 // or
 
 JsonApiResponse::from(Film::class)->allowAppends('user', ['is_active']);
+```
+
+## Allow search <Badge type="tip" text="1.0.0" vertical="middle" />
+
+::: danger
+This feature is only available for proper setup of [Laravel Scout](https://laravel.com/docs/master/scout#installation) in your model.
+:::
+
+You can also allow fulltext search (by sending `yourapi.com/?q=search_query` or `yourapi.com/?search=search_query`) to users like this:
+
+```php
+JsonApiResponse::from(Film::class)->allowSearch();
 ```
 
 ## Include allowed filters & sorts on the response
