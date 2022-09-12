@@ -112,7 +112,7 @@ To get a list (wrapped in a `JsonApiCollection`) of your resources query you sho
 JsonApiResponse::from(Film::where('title', 'LIKE', 'The%'))->list();
 ```
 
-### One resource by key <Badge type="tip" text="0.3.0" vertical="middle" />
+### One resource by key
 
 And to get a single resource you can do the following:
 

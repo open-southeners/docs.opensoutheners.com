@@ -58,6 +58,20 @@ $response->assertJsonApi(function (AssertableJsonApi $assert) {
 });
 ```
 
+### hasNotAttribute <Badge type="tip" text="1.1.0" vertical="middle" />
+
+Assert the resource does not has the specified attribute key and value.
+
+```php
+use OpenSoutheners\LaravelApiable\Testing\AssertableJsonApi;
+
+$response = $this->getJson('/posts/1');
+
+$response->assertJsonApi(function (AssertableJsonApi $assert) {
+  $assert->hasNotAttribute('title', 'Hello world');
+});
+```
+
 ### hasAttributes
 
 Assert the resource has the specified attributes keys and values.
@@ -69,6 +83,23 @@ $response = $this->getJson('/posts/1');
 
 $response->assertJsonApi(function (AssertableJsonApi $assert) {
   $assert->hasAttributes([
+    'title' => 'Hello world'
+    'slug' => 'hello-world'
+  ]);
+});
+```
+
+### hasNotAttributes <Badge type="tip" text="1.1.0" vertical="middle" />
+
+Assert the resource does not has the specified attributes keys and values.
+
+```php
+use OpenSoutheners\LaravelApiable\Testing\AssertableJsonApi;
+
+$response = $this->getJson('/posts/1');
+
+$response->assertJsonApi(function (AssertableJsonApi $assert) {
+  $assert->hasNotAttributes([
     'title' => 'Hello world'
     'slug' => 'hello-world'
   ]);
@@ -100,23 +131,6 @@ $response = $this->getJson('/posts/1');
 
 $response->assertJsonApi(function (AssertableJsonApi $assert) {
   $assert->hasType('post');
-});
-```
-
-### hasAttributes
-
-Assert the resource has the specified attributes keys and values.
-
-```php
-use OpenSoutheners\LaravelApiable\Testing\AssertableJsonApi;
-
-$response = $this->getJson('/posts/1');
-
-$response->assertJsonApi(function (AssertableJsonApi $assert) {
-  $assert->hasAttributes([
-    'title' => 'Hello world'
-    'slug' => 'hello-world'
-  ]);
 });
 ```
 
@@ -188,7 +202,7 @@ $response->assertJsonApi(function (AssertableJsonApi $assert) use ($relatedComme
 });
 ```
 
-### isCollection <Badge type="tip" text="0.3.0" vertical="middle" />
+### isCollection
 
 Assert that the response is a collection (list of resources).
 
@@ -202,7 +216,7 @@ $response->assertJsonApi(function (AssertableJsonApi $assert) {
 });
 ```
 
-### isResource <Badge type="tip" text="0.3.0" vertical="middle" />
+### isResource
 
 ```php
 use OpenSoutheners\LaravelApiable\Testing\AssertableJsonApi;

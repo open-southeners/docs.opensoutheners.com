@@ -167,6 +167,16 @@ JsonApiResponse::from(Film::class)->allowing([
 ```
 
   </CodeGroupItem>
+  
+  <CodeGroupItem title="SCOPE">
+
+```php
+JsonApiResponse::from(Film::class)->allowing([
+  AllowedFilter::scoped('active'),
+]);
+```
+
+  </CodeGroupItem>
 </CodeGroup>
 
 And even restrict what they can use for filter on each filter like so:
