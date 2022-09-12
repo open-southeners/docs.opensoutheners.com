@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.49">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>Flex URL</title><meta name="description" content="Zero-dependency utility for parsing and modifying URL params">
+    <link rel="modulepreload" href="/flex-url/assets/app.7c668b1b.js"><link rel="modulepreload" href="/flex-url/assets/404.html.63c318d5.js"><link rel="modulepreload" href="/flex-url/assets/404.html.ce538133.js"><link rel="prefetch" href="/flex-url/assets/index.html.07bfd350.js"><link rel="prefetch" href="/flex-url/assets/index.html.ed93714c.js"><link rel="prefetch" href="/flex-url/assets/usage.html.80676589.js"><link rel="prefetch" href="/flex-url/assets/index.html.178a2ddf.js"><link rel="prefetch" href="/flex-url/assets/index.html.218c2eac.js"><link rel="prefetch" href="/flex-url/assets/usage.html.e6dd5a22.js"><link rel="prefetch" href="/flex-url/assets/404.cb013b6e.js"><link rel="prefetch" href="/flex-url/assets/Layout.cd14f0b6.js">
+    <link rel="stylesheet" href="/flex-url/assets/style.b7bf2192.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>That&#39;s a Four-Oh-Four.</blockquote><a href="/flex-url/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/flex-url/assets/app.7c668b1b.js" defer></script>
+  </body>
+</html>
